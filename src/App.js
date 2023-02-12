@@ -83,7 +83,7 @@ function App() {
             if(nearbyRestaurants != null && nearbyRestaurants.results[i]['name'] === nearbyWalkingRestaurants.results[i]['name']) {
               console.log("inside loop");  
               nearbyRestaurants.results[i]["walking"] = 1;
-                console.log(nearbyRestaurants.results[i]);
+                // console.log(nearbyRestaurants.results[i]);
             }
             // console.log(nearbyRestaurants.results[i]);
           }
@@ -104,14 +104,6 @@ function App() {
     }
   
     
-  
-
-  
-  
-  
-
-
-    
 
     navigator.geolocation.getCurrentPosition(function(position) {
       setLat(position.coords.latitude);
@@ -125,28 +117,6 @@ function App() {
       lng: long
     };
 
-    // const getAddressURL = "https://maps.googleapis.com/maps/api/geocode/json?latlng="+lat+","+long+"&key=AIzaSyD_Mx8GV07MegosFOSpjyOjuQUu5QbV5Mw";
-
-    // axios.get(getAddressURL).then((response) => {
-    //   setCurrentAddress(response.data);
-    // });
-
-    // console.log(currentAddress);
-
-    
-
-    
-
-    
-      // console.log(nextPageToken);
-      // nearbyRestaurants.forEach(element => console.log(element));
-
-  
-
-  
-    
-    // const restaurants = JSON.parse(nearbyRestaurants);
-    // console.log(restaurants);
 
 
   return (
