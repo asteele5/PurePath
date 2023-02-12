@@ -1,4 +1,4 @@
-var walk == false;
+var walk = false;
 
 function check()
   {

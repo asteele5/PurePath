@@ -50,14 +50,40 @@
     Willingness to Walk
   	</label>
 	</div>
-
+	<button type="button" class="btn btn-success">Calculate</button>
 	<div class="container">
 
 
 
-	<a href="result.html" class="btn btn-success" target="_self" rel="noopener noreferrer">Calculate</a>
-		
-		
+    <span id="comment_result"></span>
+<script type="text/javascript">
+          
+          var walk = false;
+          var commuteTime;
+
+			function check()
+  			{
+      		if(document.getElementById("walk").checked) {
+    		walk = true;
+  				}
+
+			var select;
+			window.onload = function () {
+    			select = document.getElementById('dropdown');
+    			console.log(select);
+				}
+
+			function changeHiddenInput(objDropDown) {
+    		console.log(objDropDown);
+    		var objHidden = document.getElementById("hiddenInput");
+    		objHidden.value = objDropDown.value;
+    		commuteTime = objHidden.value;
+    		result.innerHTML = a || "";
+			}
+
+        </script>
+
+
 		<script src="js/bootstrap.min.js"></script>
 
 	</body>
