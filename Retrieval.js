@@ -15,6 +15,22 @@ class Retrieve {
         }
     }
 
+    topAttributes = {
+        function() {
+            for (let i = 0; i < 10; i++){
+                push(optimalRestaurants[i].name()); 
+                push(optimalRestaurants[i].price()); 
+                push(optimalRestaurants[i].rating()); 
+                push(optimalRestaurants[i].susScore());
+                push(optimalRestaurants[i].convScore()); 
+            }
+        }
+    }
+
+    get topAttributes() {
+        return this.topAttributes; 
+    }
+
     mergeSort(array) {
         const half = array.length / 2
         

@@ -4,7 +4,7 @@ class Restaurant{
         meat, healthScore, height1, height2, commuteTime, waitTime) {
             this.name = name; 
             this.price = price; 
-            this.cuisine = cuisine;  
+            this.rating = rating;  
             this.meat = meat;  
             this.healthScore = healthScore; 
             this.height1 = height1; 
@@ -23,15 +23,15 @@ class Restaurant{
                     if (meat.equals("halal")) {
                         count += 5; 
                     }
-                    count += (healthScore * 0.1); 
+                    //count += (healthScore * 0.1); 
                     return Math.trunc(count); 
                 }
             }
             const convScore = {
                 getConvScore() {
                     count = 100; 
-                    heightDiff = height2 - height1; 
-                    count -= (height2 - height1) * 0.4; 
+                    //heightDiff = height2 - height1; 
+                    //count -= (height2 - height1) * 0.4; 
                     count -= commuteTime * 0.3; 
                     return Math.trunc(count);
                 }
@@ -43,7 +43,7 @@ class Restaurant{
         healthScore, nearestStop, commuteTime) {
             this.name = name; 
             this.price = price; 
-            this.cuisine = cuisine;  
+            this.rating = rating;  
             this.meat = meat;  
             this.healthScore = healthScore; 
             this.nearestStop = nearestStop; 
@@ -60,7 +60,7 @@ class Restaurant{
                     if (meat.equals("halal")) {
                         count += 2.5; 
                     }
-                    count += (healthScore * 0.1); 
+                    //count += (healthScore * 0.1); 
                     return Math.trunc(count); 
                 }
             }
@@ -78,11 +78,26 @@ class Restaurant{
             }
             const avg = (susScore + convScore) / 2; 
     }
+
+    get susScore() {
+        return this.susScore; 
+    }
+    get convScore() {
+        return this.convScore; 
+    }
+
+    get avg() {
+        return this.avg; 
+    }
+    get name() {
+        return this.name; 
+    }
+    get price() {
+        return this.price;
+    }
+
+    get rating() {
+        return this.rating; 
+    }
 }
-
-
-
-
-
-
 
