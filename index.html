@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+
+		<link href="css/bootstrap.min.css" rel="stylesheet">
+		<link href="css/style.css" rel="stylesheet">
+
+
+
+	</head>
+
+	<body class = "text-center">
+		<div class="cover-container d-flex h-100 p-3 mx-auto flex-column">
+      <header class="masthead mb-auto">
+        <div class="inner">
+          <h1 class="masthead-brand">PurePath</h1>
+        </div>
+      </header>
+
+      <main role="main" class="inner cover">
+        <h6 class="cover-heading">eat clean. travel clean.</h6>
+        <p class="lead">Find enviornmentally friendly 
+        dining options near you:</p>
+      </main>
+
+    </div>
+	
+	<form method="post">
+		<label class="drop-label" for="dropdown">
+    Commute Time:
+  	</label>
+    <select id="dropdown" name="dropdown" onchange="changeHiddenInput(this)">
+        <option value="10">10 minutes</option>
+        <option value="15">15 minutes</option>
+        <option value="20">20 minutes</option>
+        <option value="25">25 minutes</option>
+        <option value="30">30 minutes</option>
+    </select>
+
+    <input type="hidden" name="hiddenInput" id="hiddenInput" value="" />
+
+    <button onclick="changeHiddenInput (objDropDown)">Enter</button>
+</form>
+<div id="result"> </div>
+	<div class="p-5 form-check">
+  	<input class="form-check-input" type="checkbox" value="" id="walk">
+  	<label class="form-check-label" for="flexCheckDefault">
+    Willingness to Walk
+  	</label>
+	</div>
+
+	<div class="container">
+
+
+
+	<a href="result.html" class="btn btn-success" target="_self" rel="noopener noreferrer">Calculate</a>
+		
+		
+		<script src="js/bootstrap.min.js"></script>
+
+	</body>
+
+
+</html>
